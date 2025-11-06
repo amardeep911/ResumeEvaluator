@@ -1,4 +1,5 @@
 from typing import TypedDict
+from typing import TypedDict, Optional, List
 
 class ResumeState(TypedDict):
     pdf_path: str
@@ -14,3 +15,7 @@ class ResumeState(TypedDict):
     final_score: float
     decision: str
     analysis_summary: str
+    skills_score: int
+    matched_skills : Optional[List[str]]
+    missing_skills : Optional[List[str]]
+    role_inferred: str

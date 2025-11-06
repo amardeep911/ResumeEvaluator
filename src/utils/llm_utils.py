@@ -1,6 +1,6 @@
 # src/utils/llm_utils.py
 from langchain_openai import ChatOpenAI
-from config.settings import LLM_MODEL, LLM_TEMPERATURE, LLM_API_KEY
+from src.config.settings import LLM_MODEL, LLM_TEMPERATURE, LLM_API_KEY
 
 def get_llm():
     """

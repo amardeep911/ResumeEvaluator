@@ -28,6 +28,8 @@ def pdf_loader(state: ResumeState) -> ResumeState:
             for page in pdf.pages:
                 text += page.extract_text() + "\n"
 
-    state["resume_text"] = text.strip()
-    print("[pdf_loader] Extracted text length:", len(state["resume_text"]))
-    return state
+    extracted_text = text.strip()
+    print("[pdf_loader] Extracted text length:", len(extracted_text))
+    return {
+        "resume_text": extracted_text
+    }

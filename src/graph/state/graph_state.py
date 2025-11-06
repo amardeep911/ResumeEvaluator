@@ -1,6 +1,7 @@
 from typing import TypedDict
 
 class ResumeState(TypedDict):
+    pdf_path: str
     resume_text: str
     skills_section: str
     experience_section: str

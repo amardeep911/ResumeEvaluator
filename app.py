@@ -121,6 +121,12 @@ if uploaded_file is not None:
 
             if not (edu_score or degrees or institutions):
                 st.warning("No education information extracted.")
+
+
+            st.subheader("🎓 Final Score")
+            if "final_score" in result_state:
+                st.title(f"**Final Score:** {result_state.get('final_score', 0)}")
+
             st.divider()
 
             # ============ 🧠 FULL OUTPUT ============

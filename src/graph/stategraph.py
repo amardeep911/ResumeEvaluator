@@ -14,7 +14,7 @@ def create_graph():
     graph.add_node("pdf_loader", pdf_loader)
     graph.add_node("skills_evaluator", skills_evaluator)
     graph.add_node("project_evaluator", project_evaluator)
-    graph.add_node("score_aggregator", score_evaluator)
+    graph.add_node("score_evaluator", score_evaluator)
 
     graph.add_node("personal_info_evaluator", personal_info_extractor)
     graph.add_node("education_evaluator", education_evaluator)

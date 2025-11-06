@@ -89,5 +89,8 @@ if uploaded_file is not None:
             with st.expander("🧠 Full State Output"):
                 st.json(result_state)
 
+            if "final_score" in result_state:
+                st.write(f"**Final Score:** {result_state.get('final_score', 0)}")
+
         except Exception as e:
             st.error(f"❌ Error during evaluation: {e}")

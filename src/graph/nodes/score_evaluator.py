@@ -26,7 +26,9 @@ def score_evaluator(state: ResumeState) -> ResumeState:
     )
 
     
-    state["final_score"] = round(final_score, 3)
-    print(f"[score_evaluator] → Final Score: {state['final_score']}")
+    final_score = round(final_score, 3)
+    print(f"[score_evaluator] → Final Score: {final_score}")
 
-    return state
+    return {
+        "final_score": final_score
+    }

@@ -122,12 +122,22 @@ if uploaded_file is not None:
             if not (edu_score or degrees or institutions):
                 st.warning("No education information extracted.")
 
-
+            
             st.subheader("🎓 Final Score")
             if "final_score" in result_state:
                 st.title(f"**Final Score:** {result_state.get('final_score', 0)}")
 
             st.divider()
+
+            st.subheader("🏆 Achievements & Certifications")
+            achievements = result_state.get("achievements", [])
+            if achievements:
+                st.write("**Found:**")
+                for a in achievements:
+                    st.write(f"- {a}")
+                st.write(f"**Bonus Score Added:** {result_state.get('achievement_score',0)*100:.1f}%")
+            else:
+                st.write("No notable achievements detected.")
 
             # ============ 🧠 FULL OUTPUT ============
             with st.expander("🧠 Full State Output"):

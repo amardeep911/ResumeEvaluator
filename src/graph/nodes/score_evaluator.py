@@ -16,13 +16,15 @@ def score_evaluator(state: ResumeState) -> ResumeState:
     experience = float(state.get("experience_score", 0.0))
     project = float(state.get("project_score", 0.0))
     education = float(state.get("education_score", 0.0))
+    achievements = float(state.get("achievement_score", 0.0))
 
     
     final_score = (
         WEIGHT_SKILLS * skills +
         WEIGHT_EXPERIENCE * experience +
         WEIGHT_PROJECTS * project +
-        WEIGHT_EDUCATION * education
+        WEIGHT_EDUCATION * education +
+        achievements
     )
 
     

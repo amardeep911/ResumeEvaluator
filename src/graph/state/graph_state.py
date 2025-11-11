@@ -34,5 +34,9 @@ class ResumeState(TypedDict, total = False):
     degrees: Optional[List[str]]
     institutions: Optional[List[str]]
 
+    ## Achievements Evaluator
+    achievements: List[str]
+    achievement_score: float
+
     ## Final score after evaluation
     final_score: float

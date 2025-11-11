@@ -6,3 +6,4 @@ typing
 dotenv
 pydantic
 streamlit
+langchain_community
